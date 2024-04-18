@@ -5,12 +5,12 @@ import { SOCIAL_LINKS, TECH_STACK } from "@/constants";
 
 export default function Home() {
 	return (
-		<main className="flex h-screen items-center justify-center">
+		<main className="flex h-dvh items-center justify-center">
 			<section className="flex flex-col items-center gap-8">
 				<header className="flex flex-col items-center gap-2">
 					<h1 className="text-6xl font-bold">Michał Łata</h1>
 					<p className="">Web Developer | Tech & AI enthusiast</p>
-					<ul className="text-primary flex gap-2 text-xl font-bold">
+					<ul className="flex gap-2 text-xl font-bold text-primary">
 						{TECH_STACK.map((tech, index) => (
 							<li key={index}>{tech}</li>
 						))}
@@ -35,7 +35,7 @@ export default function Home() {
 									href={href}
 									target="_blank"
 									rel="noopener noreferrer"
-									className="bg-primary hover:bg-primary-dark block rounded-md p-4 shadow-sm transition-colors"
+									className="block rounded-md bg-primary p-4 shadow-sm transition-colors hover:bg-primary-dark"
 								>
 									<span className="sr-only">{label}</span>
 									{icon}
