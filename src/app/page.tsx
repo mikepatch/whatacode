@@ -23,6 +23,7 @@ export default function Home() {
 						width={400}
 						height={400}
 						className="h-full w-full object-cover"
+						loading="eager"
 					/>
 				</figure>
 				<article className="flex flex-col gap-4">
