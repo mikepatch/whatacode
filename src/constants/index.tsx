@@ -19,5 +19,3 @@ export const SOCIAL_LINKS: TSocialLink[] = [
 		label: "Email",
 	},
 ];
-
-export const TECH_STACK = ["TypeScript", "React", "Next.js", "NestJS"];
