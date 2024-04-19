@@ -18,7 +18,7 @@ export default function Home() {
 						))}
 					</ul>
 				</header>
-				<figure className="outline-brand-primary animate-fade-up animation-delay-700 aspect-square w-56 overflow-hidden rounded-full shadow-sm outline">
+				<figure className="outline-brand-primary aspect-square w-56 overflow-hidden rounded-full shadow-sm outline">
 					<NextImage
 						src="/images/mike.jpeg"
 						alt="Michał Łata – Web Developer"
