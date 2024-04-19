@@ -1,4 +1,6 @@
 import type { Config } from "tailwindcss";
+import { PluginAPI } from "tailwindcss/types/config";
+const plugin = require("tailwindcss/plugin");
 
 const config: Config = {
 	content: [
@@ -13,10 +15,10 @@ const config: Config = {
 		},
 		extend: {
 			animation: {
-				"fade-up": "fade-up 1s ease-out both",
-				"fade-down": "fade-down 1s ease-out both",
-				"fade-left": "fade-left 1s ease-out both",
-				"fade-right": "fade-right 1s ease-out both",
+				"fade-up": "fade-up .5s ease-out both",
+				"fade-down": "fade-down .5s ease-out both",
+				"fade-left": "fade-left .5s ease-out both",
+				"fade-right": "fade-right .5s ease-out both",
 				"fade-in": "fade-in 1s ease-out both",
 			},
 			keyframes: {
@@ -78,6 +80,57 @@ const config: Config = {
 			},
 		},
 	},
-	plugins: [],
+	plugins: [
+		plugin(
+			({
+				matchUtilities,
+				theme,
+			}: {
+				matchUtilities: PluginAPI["matchUtilities"];
+				theme: PluginAPI["theme"];
+			}) => {
+				matchUtilities(
+					{
+						"animation-delay": (value: string) => {
+							return {
+								"animation-delay": value,
+							};
+						},
+					},
+					{
+						// values: ["100", "200", "300", "400", "500", "600", "700", "800", "900", "1000"],
+						// values: theme("transitionDelay"),
+						values: {
+							"0": "0s",
+							"100": "100ms",
+							"150": "150ms",
+							"200": "200ms",
+							"250": "250ms",
+							"300": "300ms",
+							"350": "350ms",
+							"400": "400ms",
+							"450": "450ms",
+							"500": "500ms",
+							"550": "550ms",
+							"600": "600ms",
+							"650": "650ms",
+							"700": "700ms",
+							"750": "750ms",
+							"800": "800ms",
+							"850": "850ms",
+							"900": "900ms",
+							"950": "950ms",
+							"1000": "1000ms",
+							"1100": "1100ms",
+							"1200": "1200ms",
+							"1300": "1300ms",
+							"1400": "1400ms",
+							"1500": "1500ms",
+						},
+					},
+				);
+			},
+		),
+	],
 };
 export default config;
