@@ -3,7 +3,7 @@ import { NAV_ITEMS } from "@/constants";
 
 export const NavDesktop = () => {
 	return (
-		<ul className="hidden text-lg md:flex">
+		<ul className="container relative z-50 mx-auto hidden justify-end text-lg sm:flex">
 			{NAV_ITEMS.map((item) => (
 				<li key={item.href}>
 					<ActiveLink
