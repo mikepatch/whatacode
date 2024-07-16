@@ -12,7 +12,7 @@ export const NavMobile = ({ isOpen, toggle }: MobileProps) => {
 	return (
 		<aside
 			className={clsx(
-				"fixed inset-0 flex items-center bg-black bg-opacity-70 bg-clip-padding backdrop-blur-md backdrop-filter transition-all duration-300 ease-in-out",
+				"glassmorphism fixed inset-0 flex items-center bg-black bg-opacity-70 transition-all duration-300 ease-in-out",
 				isOpen
 					? "pointer-events-auto visible opacity-100"
 					: "pointer-events-none invisible opacity-0",

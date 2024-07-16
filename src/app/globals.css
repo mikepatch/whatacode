@@ -7,3 +7,9 @@
 		text-wrap: balance;
 	}
 }
+
+.glassmorphism {
+	background: rgba(34, 34, 34, 0.8);
+	backdrop-filter: blur(12px);
+	-webkit-backdrop-filter: blur(12px);
+}
