@@ -13,7 +13,7 @@ export const Navigation = () => {
 	const toggle = () => setIsOpen((prev) => !prev);
 
 	const handleScroll = () => {
-		if (window.scrollY > 20) {
+		if (window.scrollY > 50) {
 			setScrolled(true);
 		} else {
 			setScrolled(false);
@@ -29,9 +29,12 @@ export const Navigation = () => {
 	return (
 		<nav className="sticky top-0 flex h-20 w-full items-center justify-end px-4">
 			<div
-				className={clsx("absolute inset-0 -mt-px transition-colors", {
-					"bg-gradient-background shadow-lg": scrolled,
-				})}
+				className={clsx(
+					"absolute inset-0 -mt-px bg-gradient-background opacity-0 shadow-lg transition-opacity",
+					{
+						"opacity-100": scrolled,
+					},
+				)}
 			/>
 			<NavMobile isOpen={isOpen} toggle={toggle} />
 			<NavDesktop />
