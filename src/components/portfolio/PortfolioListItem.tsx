@@ -11,15 +11,14 @@ export const PortfolioListItem = ({
 	projectDetails: { title, technologies, description, links, imageSrc },
 }: PortfolioListItemProps) => {
 	return (
-		<li className="flex flex-col gap-4 sm:grid sm:grid-cols-3">
-			<figure className="aspect-video w-full self-center overflow-hidden rounded-sm shadow-sm">
+		<li className="flex w-full flex-col gap-4 sm:grid sm:grid-cols-3">
+			<figure className="relative aspect-video w-full self-center overflow-hidden rounded-sm shadow-sm">
 				<NextImage
 					src={imageSrc}
 					alt={title}
-					width={400}
-					height={400}
+					fill
 					className="h-full w-full object-cover object-top"
-					loading="eager"
+					loading="lazy"
 				/>
 			</figure>
 			<article className="flex flex-col justify-between gap-2 sm:col-span-2">
