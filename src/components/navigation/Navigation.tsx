@@ -27,7 +27,7 @@ export const Navigation = () => {
 	}, []);
 
 	return (
-		<nav className="sticky top-0 z-50 flex h-20 w-full items-center justify-end px-4">
+		<nav className="fixed top-0 z-50 flex h-20 w-full items-center justify-end px-4">
 			<div
 				className={clsx(
 					"absolute inset-0 -mt-px bg-gradient-background opacity-0 shadow-lg transition-opacity",
