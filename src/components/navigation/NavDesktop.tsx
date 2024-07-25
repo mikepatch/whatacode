@@ -7,7 +7,7 @@ export const NavDesktop = () => {
 			{NAV_ITEMS.map((item) => (
 				<li key={item.href}>
 					<ActiveLink
-						className="border-b-2 border-primary border-opacity-30 px-2 py-1 transition-all hover:border-opacity-100"
+						className="border-b-2 border-primary border-opacity-30 px-2 py-2 transition-all hover:border-opacity-100"
 						href={item.href}
 						activeClassName="!border-opacity-100"
 					>
