@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import clsx from "clsx";
 
+import Link from "next/link";
 import { NavDesktop } from "@/components/navigation/NavDesktop";
 import { NavMobile } from "@/components/navigation/NavMobile";
 import { NavToggleButton } from "@/components/navigation/NavToggleButton";
@@ -27,18 +28,25 @@ export const Navigation = () => {
 	}, []);
 
 	return (
-		<nav className="fixed top-0 z-50 flex h-20 w-full items-center justify-end px-4">
+		<header className="fixed top-0 z-50 flex h-20 w-full items-center px-4">
 			<div
 				className={clsx(
-					"absolute inset-0 -mt-px bg-gradient-background opacity-0 shadow-lg transition-opacity",
+					"glassmorphism absolute inset-0 -z-10 -mt-px opacity-0 shadow-lg transition-opacity",
 					{
 						"opacity-100": scrolled,
 					},
 				)}
 			/>
-			<NavMobile isOpen={isOpen} toggle={toggle} />
-			<NavDesktop />
-			<NavToggleButton isOpen={isOpen} toggle={toggle} />
-		</nav>
+			<nav className="container mx-auto flex items-center justify-between">
+				<Link href="/" className="flex gap-0.5 transition-all hover:gap-1">
+					<p className="text-2xl font-bold">m</p>
+					<div className="aspect-square h-2 self-center rounded-full bg-primary" />
+					<p className="text-2xl font-bold">ł</p>
+				</Link>
+				<NavMobile isOpen={isOpen} toggle={toggle} />
+				<NavDesktop />
+				<NavToggleButton isOpen={isOpen} toggle={toggle} />
+			</nav>
+		</header>
 	);
 };

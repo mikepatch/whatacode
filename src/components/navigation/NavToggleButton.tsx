@@ -8,6 +8,9 @@ export const NavToggleButton = ({ isOpen, toggle }: MenuToggleProps) => {
 
 	return (
 		<button
+			aria-label="Toggle navigation"
+			aria-expanded={isOpen}
+			tabIndex={-1}
 			onClick={toggle}
 			className="group relative z-[100] flex h-12 w-12 cursor-pointer flex-col items-center justify-center sm:hidden"
 		>
