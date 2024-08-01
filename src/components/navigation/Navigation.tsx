@@ -37,7 +37,7 @@ export const Navigation = () => {
 					},
 				)}
 			/>
-			<nav className="container mx-auto flex items-center justify-between">
+			<nav className="container mx-auto flex max-w-5xl items-center justify-between">
 				<Link href="/" className="flex gap-0.5 transition-all hover:gap-1">
 					<p className="text-2xl font-bold">m</p>
 					<div className="aspect-square h-2 self-center rounded-full bg-primary" />
