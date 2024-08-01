@@ -12,7 +12,7 @@ export const ButtonLink = ({ href, icon, label }: ButtonLinkProps) => {
 			href={href}
 			target="_blank"
 			rel="noopener noreferrer"
-			className="flex gap-2 rounded-sm bg-primary p-4 shadow-sm transition-colors hover:bg-primary-dark"
+			className="flex items-center gap-2 rounded-sm bg-primary p-4 shadow-sm transition-colors hover:bg-primary-dark"
 		>
 			{icon}
 			<span className="sr-only sm:not-sr-only">{label}</span>
