@@ -3,17 +3,17 @@ import NextImage from "next/image";
 import { SOCIAL_LINKS } from "@/constants";
 import { ButtonLink } from "@/components/ButtonLink";
 
-export default function Home() {
+export default function HomePage() {
 	return (
-		<main className="-mt-20 flex h-dvh items-center justify-center gap-6 px-2">
+		<main className="flex h-dvh items-center justify-center gap-6 px-2">
 			<section className="flex flex-col gap-8">
 				<header className="flex flex-col gap-2 border-l-8 border-primary pl-2">
 					<h1 className="text-5xl font-bold sm:text-6xl">Michał Łata</h1>
 					<p className="">Web Developer | Tech & AI enthusiast</p>
 				</header>
-				<figure className="aspect-square w-56 self-center overflow-hidden rounded-full border-4 border-white shadow-sm">
+				<figure className="aspect-square w-56 self-center overflow-hidden rounded-full border-4 border-white bg-primary-dark shadow-sm">
 					<NextImage
-						src="/images/mike.jpeg"
+						src="/images/mike-transparent.png"
 						alt="Michał Łata – Web Developer"
 						width={400}
 						height={400}
