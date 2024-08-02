@@ -26,12 +26,16 @@ export const NAV_ITEMS: TNavItem[] = [
 		label: "home",
 	},
 	{
-		href: "/about",
-		label: "about",
+		href: "/about-me",
+		label: "about me",
 	},
 	{
 		href: "/portfolio",
 		label: "portfolio",
+	},
+	{
+		href: "/contact",
+		label: "contact",
 	},
 ];
 
