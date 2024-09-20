@@ -33,10 +33,10 @@ export const NAV_ITEMS: TNavItem[] = [
 		href: "/portfolio",
 		label: "portfolio",
 	},
-	{
-		href: "/contact",
-		label: "contact",
-	},
+	// {
+	// 	href: "/contact",
+	// 	label: "contact",
+	// },
 ];
 
 export const PORTFOLIO_ITEMS: TPortfolioItem[] = [
