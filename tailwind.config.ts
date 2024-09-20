@@ -58,10 +58,6 @@ const config: Config = {
 		"./src/app/**/*.{js,ts,jsx,tsx,mdx}",
 	],
 	theme: {
-		colors: {
-			white: "#EEEEEE",
-			black: "#222222",
-		},
 		extend: {
 			animation: {
 				"fade-up": "fade-up .5s ease-out both",
@@ -125,6 +121,8 @@ const config: Config = {
 				primary: "#42880C",
 				"primary-dark": "#336A0A",
 				"primary-very-dark": "#204206",
+				white: "#EEEEEE",
+				black: "#222222",
 			},
 			backgroundImage: {
 				"gradient-background": "radial-gradient(circle, rgb(59,59,59) 0%, rgb(40,40,40) 80%)",
